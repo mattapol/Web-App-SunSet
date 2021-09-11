@@ -24,7 +24,7 @@ st.markdown(
 st.sidebar.subheader('SUNSET50 🌞')
 
 # Retrieving tickers data
-ticker_list = pd.read_csv("set50.csv")
+ticker_list = pd.read_csv("https://raw.githubusercontent.com/mattapol/Web-App-SunSet/main/Streamlit2/set50.csv")
 symbols = ticker_list['Symbol'].sort_values().tolist()
 ticker = st.sidebar.selectbox('Choose a SET50 Stock 📈', ticker_list) # Select ticker symbol
 
