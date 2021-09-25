@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: .900rem;
+  }
+  
+  i {
+    color: #f8f8f8;
+  }
+  
+  .wrapper {
+    width: 150;
+    margin: 0 auto;
+  }
+  
+  .statistic {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .total_case_box {
+    margin-top: 2rem;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 15px;
+    background: #ffc107f5;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .box_wrapper {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 15px;
+    background: #ffc107f5;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .box {
+    border-right: 2px solid #f5f6f7;
+  }
+  
+  .box:last-child {
+    border: none;
+  }
+  
+  .countries_stat {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 15px;
+    background: #fc5d02;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.3);
+  }

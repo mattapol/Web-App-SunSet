@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>SUNSET - Technical</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+    <!-- Font Digital Date -->
+    <link href="http://fonts.cdnfonts.com/css/led-digital-7" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/stock.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+  </head>
+  <body onload="initClock()">
+    
+<header class="navbar navbar-dark sticky-top bg-orange flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 px-3" href="index.html">
+    <img src="png/sun.png" width="40" height="40">
+    Sun <sup>SET</sup></a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link1 px-3" href="index.html">Stock</a>
+       <a class="nav-link2 px-3" href="technical.html">Technical</a>
+        <a class="nav-link3 px-3" target="_bank" href="news.html">News</a>
+         <a class="nav-link4 px-3" href="analysis.html">Analysis</a>
+          <a class="nav-link5 px-3" href="about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <br>
+          <li class="nav-item">
+            <a class="nav-link" href="analysis.html">
+              <img src="png/50.png" width="30" height="30">
+              SET50
+            </a>
+          </li>
+          <br>
+          <li class="nav-item">
+            <a class="nav-link" href="analy_set100.html">
+              <img src="png/100.png" width="30" height="30">
+              SET100
+            </a>
+          </li>
+          <br>
+          <li class="nav-item">
+            <a class="nav-link" href="analy_sethd.html">
+              <img src="png/hd.png" width="30" height="30">
+              SETHD
+            </a>
+          </li>
+          <br>
+          <li class="nav-item">
+            <a class="nav-link" href="analy_sset.html">
+              <img src="png/s.png" width="30" height="30">
+              sSET
+            </a>
+          </li>
+          <br>
+          <li class="nav-item">
+            <a class="nav-link" href="analy_setclmv.html">
+              <img src="png/c.png" width="30" height="30">
+              SETCLMV
+            </a>
+          </li>
+          <br>
+          <li class="nav-item">
+            <a class="nav-link" href="analy_setwb.html">
+              <img src="png/w.png" width="30" height="30">
+              SETWB
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <!--digital clock start-->
+          <div class="datetime" style="font-size: 1.5rem;">
+            <div class="date" style="display: inline">
+              <span id="dayname">Day</span>📅
+              <span id="month">Month</span>
+              <span id="daynum">00</span>
+              <span id="year">Year</span>&nbsp;📎
+            </div>
+            <div class="time" style="display: inline">
+              <span id="hour">00</span>:
+              <span id="minutes">00</span>:
+              <span id="seconds">00</span>
+              <span id="period">AM</span>⏳
+            </div>
+          </div>
+          <!--digital clock end-->
+          <a style="background-color:Tomato;" target="_bank" href="https://share.streamlit.io/mattapol/sunset-analy/main/analysis-app.py">
+            <b>👉 Go To Analysis</b>
+            <img src="png/giphy.gif" style="display: inline; height:100px; width:100px">
+          </a>
+      </div>
+
+      <div class="box" style="background-color:rgb(0, 0, 0);">
+        <marquee style="white-space:nowrap;" scrolldelay="1" onmouseover="stop();" onmouseout="start();">
+          <a style="display: inline; color:rgb(255, 72, 0);" target="_bank" href="covid-thailand.html"><u><b>Covid Alert</u></b>🔔</a>&emsp;
+          <h6 style="display: inline; color:rgb(255, 255, 255);">Total Cases :</h6>
+          <h6 style="display: inline; color:rgb(255, 255, 255);" id="cases">loading</h6>&#160;
+          <h6 style="display: inline; color:red;">➕New Case :</h6>
+          <h6 style="display: inline; color:red;" id="new_cases">loading</h6>&#160;
+          <h6 style="display: inline; color:red;">❌New Death :</h6>
+          <h6 style="display: inline; color:red;" id="new_deaths">loading</h6>&#160;
+          <h6 style="display: inline; color:rgb(255, 255, 255);">Active Cases :</h6>
+          <h6 style="display: inline; color:rgb(255, 255, 255);" id="active_cases">loading</h6>&#160;
+          <h6 style="display: inline; color:red;">Serious Critical :</h6>
+          <h6 style="display: inline; color:red;" id="serious_critical">loading</h6>&#160;
+          <h6 style="display: inline; color:rgb(255, 255, 255);">Total Death :</h6>
+          <h6 style="display: inline; color:rgb(255, 255, 255);" id="deaths">loading</h6>&#160;
+          <h6 style="display: inline; color:rgb(15, 235, 15);">✅Total Recovery :</h6>
+          <h6 style="display: inline; color:rgb(15, 235, 15);" id="total_recovered">loading</h6>&#160;
+        </marquee>
+      </div>
+
+      <div class="box" style="background-color:rgb(0, 0, 0);">
+        <marquee style="white-space:nowrap;" scrolldelay="70" onmouseover="stop();" onmouseout="start();">
+          <!--Start SET50 Show Bar -->
+          <a style="display: inline; color:rgb(255, 255, 255);">|</h6>&#160;
+          <a style="display: inline; color:rgb(255, 72, 0);"><u><b>SETWB</u></b>📈</a>&emsp;
+          <h6 style="display: inline; color:red;">Close🌌 :</h6>
+          <h6 style="display: inline; color:red;" id="regularMarketPreviousClose">loading</h6>&#160;&emsp;
+          <h6 style="display: inline; color:rgb(15, 235, 15);">Open🌈 :</h6>
+          <h6 style="display: inline; color:rgb(15, 235, 15);" id="regularMarketOpen">loading</h6>&#160;&emsp;
+          <h6 style="display: inline; color:red;">Low☄ :</h6>
+          <h6 style="display: inline; color:red;" id="regularMarketDayLow ">loading</h6>&#160;&emsp;
+          <h6 style="display: inline; color:rgb(15, 235, 15);">High🚀 :</h6>
+          <h6 style="display: inline; color:rgb(15, 235, 15);" id="regularMarketDayHigh">loading</h6>&#160;
+          <a style="display: inline; color:rgb(255, 255, 255);">|</h6>&#160;
+          <!--END SET50 Show Bar -->
+        </marquee>
+      </div>
+
+      <iframe src="iframe_symbol_setwb.htm" name="symbolstockwb" style="height:520px; width:1215px;" title="symbolstockwb"></iframe>
+
+      <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+          <h5>How to use</h5><br>
+          <img src="png/use01.jpeg" style="display: inline; height:400px; width:290px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/right.png" style="display: inline; height:100px; width:100px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/use02.jpeg" style="display: inline; height:400px; width:290px"><br><br>
+          <h5>กดเลือกกลุ่มดัชนีหุ้น ➡ เลือกหุ้นที่ต้องการ<br><br>
+<!------------------------------------------------------------Fundamental---------------------------------------------------------------------->
+          <img src="png/use03.jpeg" style="display: inline; height:130px; width:250px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/twoway.png" style="display: inline; height:100px; width:100px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/use04.jpeg" style="display: inline; height:300px; width:500px"><br><br>
+          <h5>หน้า Fundamental ➡ เเสดงข้อมูลพื้นฐานของดัขนีหุ้น<br><br>
+<!------------------------------------------------------------Statistics---------------------------------------------------------------------->
+          <img src="png/use05.jpeg" style="display: inline; height:200px; width:250px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/twoway.png" style="display: inline; height:100px; width:100px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/use06.jpeg" style="display: inline; height:300px; width:500px"><br><br>
+          <h5>หน้า Statistics ➡ สามารถเลือกจํานวนวันย้อนที่ต้องการดูข้อมูลเเละรายละเอียดทางสถิติของดัขนีหุ้นนั้นๆ<br><br>
+<!------------------------------------------------------------Technical---------------------------------------------------------------------->
+          <img src="png/use07.jpeg" style="display: inline; height:250px; width:250px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/twoway.png" style="display: inline; height:100px; width:100px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/use08.jpeg" style="display: inline; height:350px; width:550px"><br><br>
+          <h5>หน้า Technical ➡ สามารถเลือกวันเริ่มเเละวันสิ้นสุด<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            ➡ มี Indicator 3 รูปเเบบ<br></h5>
+                            1.Trend Following Indicators คือดัชนีชี้วัดทิศทางแนวโน้ม เช่น MACD, ADX, DI+, DI-, SMA, EMA<br>
+                            2.Momentum indicators คือดัชนีชี้วัดทิศทางแนวโน้ม เช่น RSI, CCI<br>
+                            3.Volatility indicators เช่น BOLL, ATR<br><br>
+<!------------------------------------------------------------Short Note---------------------------------------------------------------------->
+          <img src="png/use09.jpeg" style="display: inline; height:200px; width:250px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/right.png" style="display: inline; height:100px; width:100px">&emsp;&emsp;&emsp;&emsp;&emsp;
+          <img src="png/use10.jpeg" style="display: inline; height:180px; width:600px"><br><br>
+          <h5>หน้า Short Note ➡ สามารถบันทึกข้อความเเละสามารถเลือกติ๊กเพื่อขีดฆ่าข้อความทิ้ง<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                             ➡ <u>คําเตือน</u>-ห้ามกดรีเฟสใหม่เพราะจะทําข้อมูลรีเซตทั้งหมด</h5>
+      </div>
+<!----------------------------------------------------Layer Content------------------------------------------------------------------------------------------------------------------>
+      <iframe src="https://share.streamlit.io/mattapol/web-app-sunset/Streamlit/short-note-app.py" name="shortnote" class="my-4 w-100" style="height:242px;width:1200px" title="shortnote"></iframe>
+<!----------------------------------------------------Layer Content Level End------------------------------------------------------------------------------------------------------------------>
+      <div class="container mt-3"></div>
+        <div class="media border p-2 shadow-lg bg-warning" >
+          <img src="png/abas.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+          &emsp;&emsp;<a href="me.html" style="display: inline; color:red; width: auto;"><font size="5"><b>Mattapol Kittitham</b></font></a>&emsp;Developed on August 6, 2021<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Developed for Research, Faculty of Science Department of Computer Science
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" 
+              integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" 
+              integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+      <script src="js/date_time.js"></script>
+      <script src="js/api_covid_th.js"></script>
+      <script src="js/api_stockwb.js"></script>
+  </body>
+</html>

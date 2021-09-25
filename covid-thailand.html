@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>SUNSET - Stat Covid</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-orange flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 px-3" href="index.html">
+    <img src="png/sun.png" width="40" height="40">
+    Sun <sup>SET</sup></a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link1 px-3" href="index.html">Stock</a>
+       <a class="nav-link2 px-3" href="technical.html">Technical</a>
+        <a class="nav-link3 px-3" href="news.html">News</a>
+         <a class="nav-link4 px-3" href="analysis.html">Analysis</a>
+          <a class="nav-link5 px-3" href="about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span style="font-size: 1rem;">Covid&emsp;<img src="png/covid-19.png" width="30" height="30"></span>
+          </h6>
+          <br>
+          <li class="nav-item">
+            <a class="nav-link active" href="covid-thailand.html"> 
+              <img src="png/thailand.png" width="30" height="30">
+              Thailand
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="covid-global.html"> 
+              <img src="png/planet-earth.png" width="30" height="30">
+              Global
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Stat Covid of Thailand</h1>
+      </div>
+      
+      <!-- STAT Thailand Covid-->
+      <div class="wrapper">
+        <div class="statistic">
+          <div class="total_case_box"> 
+            <h2>
+              <i class="fa fa-address-book" aria-hidden="true"></i>
+              Total Cases
+            </h2>
+            <p style="font-size: 3rem;" id="cases">loading...</p>
+          </div>
+          <div class="box_wrapper">
+            <div class="box">
+              <h2>
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                New Case
+              </h2>
+              <p style="font-size: 1.5rem;" id="new_cases">loading...</p>
+            </div>
+            <div class="box">
+              <h2>
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                New Death
+              </h2>
+              <p style="font-size: 1.5rem;" id="new_deaths">loading...</p>
+            </div>
+            <div class="box">
+              <h2>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                Active Cases
+              </h2>
+              <p style="font-size: 1.5rem;" id="active_cases">loading...</p>
+            </div>
+            <div class="box">
+              <h2>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                Serious Critical
+              </h2>
+              <p style="font-size: 1.5rem;" id="serious_critical">loading...</p>
+            </div>            
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="statistic">
+            <div class="box_wrapper">
+              <h2>
+                <i class="fa fa-user-times" aria-hidden="true"></i>
+                Total Death
+              </h2>
+              <p style="font-size: 1.5rem;" id="deaths">loading...</p>
+              <h2>
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+                Total Recovery
+              </h2>
+              <p style="font-size: 1.5rem;" id="total_recovered">loading...</p>
+            </div> 
+        </div>
+      </div>
+      <br>
+      <div class="container mt-3"></div>
+        <div class="media border p-2 shadow-lg bg-warning" >
+          <img src="png/abas.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+          &emsp;&emsp;<a href="me.html" style="display: inline; color:red;"><font size="5"><b>Mattapol Kittitham</b></font></a>&emsp;Developed on August 6, 2021<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Developed for Research, Faculty of Science Department of Computer Science
+        </div>
+      </div>
+    </main>
+
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/api_covid_th.js"></script>
+  </body>
+</html>

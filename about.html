@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>SUNSET - About Web</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Digital Date -->
+    <link href="http://fonts.cdnfonts.com/css/led-digital-7" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+  </head>
+  <body onload="initClock()">
+    
+<header class="navbar navbar-dark sticky-top bg-orange flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 px-3" href="index.html">
+    <img src="png/sun.png" width="40" height="40">
+    Sun <sup>SET</sup></a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link1 px-3" href="index.html">Stock</a>
+       <a class="nav-link2 px-3" href="technical.html">Technical</a>
+        <a class="nav-link3 px-3" target="_bank" href="news.html">News</a>
+         <a class="nav-link4 px-3" href="analysis.html">Analysis</a>
+          <a class="nav-link5 px-3" href="about.html">About</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <br>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="me.html">
+              <img src="png/me.png" width="25" height="25">
+              About Me
+            </a>
+          </li>
+          <br>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              <img src="png/web.png" width="25" height="25">
+              About Web
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">About Web</h1>
+          <!--digital clock start-->
+          <div class="datetime" style="font-size: 1.5rem;">
+            <div class="date" style="display: inline">
+              <span id="dayname">Day</span>📅
+              <span id="month">Month</span>
+              <span id="daynum">00</span>
+              <span id="year">Year</span>&nbsp;📎
+            </div>
+            <div class="time" style="display: inline">
+              <span id="hour">00</span>:
+              <span id="minutes">00</span>:
+              <span id="seconds">00</span>
+              <span id="period">AM</span>⏳
+            </div>
+          </div>
+          <!--digital clock end-->
+      </div>
+
+      <h4>What helps in building a webapp...</h4>
+      <br>
+      <div class="table-responsive">
+        <table class="table table-warning table-striped">
+          <thead>
+            <tr>
+              <th scope="col"><font size="3">Type</font></th>
+              <th scope="col"><font size="3">Name</font></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Api</b></td>     
+              <td><a class="nav-link" href="https://newsapi.org/s/thailand-science-news-api">Newapi</a></td>          
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://rapidapi.com/">Rapidapi</a></td>        
+            </tr>
+            <tr>
+              <td><b></b></td>     
+              <td><a class="nav-link" href="https://www.yahoofinanceapi.com/dashboard">YahooFinanceapi</a></td>          
+            </tr>
+            <tr>
+              <td><b>Tool deploy to Web app</b></td>     
+              <td><a class="nav-link" href="https://streamlit.io/">Streamlit</a></td>          
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://id.heroku.com/login">Heroku</a></td>        
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://github.com/mattapol">Github</a></td>        
+            </tr>
+            <tr>
+              <td><b>Programming Language</b></td>     
+              <td><a class="nav-link" href="https://materializecss.com/about.html">Materialize</a></td>       
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://getbootstrap.com/">Booststrap</a></td>        
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://jquery.com/">Jquery</a></td>        
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://cdn.datatables.net/1.10.21/">Datatables</a></td>       
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://www.convertcsv.com/csv-to-html.htm">Convertcsv</a></td>          
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://pandas.pydata.org/docs/index.html">Pandas</a></td>          
+            </tr>
+            <tr>
+              <td><b>Icon</b></td>     
+              <td><a class="nav-link" href="https://fontawesome.com/">Fontawesome</a></td>           
+            </tr>
+            <tr>
+              <td></td>
+              <td><a class="nav-link" href="https://giphy.com/gifs/bounce-loading-load-MDrmyLuEV8XFOe7lU6">Giphy</a></td>     
+            </tr>
+            <tr>
+              <td></td>
+              <td><a class="nav-link" href="https://www.flaticon.com/">Flaticon</a></td>     
+            </tr>
+            <tr>
+              <td><b>Knowledge source</b></td>     
+              <td><a class="nav-link" href="https://stackoverflow.com/">Stackoverflow</a></td>   
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://www.w3schools.com/">W3school</a></td>   
+            </tr>
+            <tr>
+              <td></td>   
+              <td><a class="nav-link" href="http://www.w3bai.com/th/index.html">W3bai</a></td>          
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://developer.mozilla.org/en-US/">Mozilla</a></td>
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://www.borntodev.com/c/">Borntodev</a></td>          
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://www.youtube.com/channel/UCeKE6wQHTt5JpS9_RsH4hrg">Patiphan Phengpao</a></td>          
+            </tr>
+            <tr>
+              <td><b>Information</b></td>   
+              <td><a class="nav-link" href="https://www.set.or.th/set/mainpage.do?language=th&country=TH">SET</a></td>       
+            </tr>
+            <tr>
+              <td></td>     
+              <td><a class="nav-link" href="https://www.investing.com/">Investing</a></td>          
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container mt-3"></div>
+        <div class="media border p-2 shadow-lg bg-warning" >
+          <img src="png/abas.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+          &emsp;&emsp;<a href="me.html" style="display: inline; color:red;"><font size="5"><b>Mattapol Kittitham</b></font></a>&emsp;Developed on August 6, 2021<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Developed for Research, Faculty of Science Department of Computer Science
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/dashboard.js"></script>
+      <script src="js/date_time.js"></script>
+  </body>
+</html>
